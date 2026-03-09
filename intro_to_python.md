@@ -70,10 +70,7 @@ pip config set trusted-host mirrors.cloud.tencent.com
 ```cmd
 python simple_demo.py
 ```
-等同于以下“咒语”：
-```cmd
-python -c "print('hello maths master, 1+1=',1+1)"
-```
+
 - 使用编程环境试一试
   - Visual Studio Code
   - Jupyter Notebook
