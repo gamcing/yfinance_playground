@@ -14,7 +14,7 @@ def get_local_ip_address():
 def get_public_ip_address():
     import requests
     try:
-        response = requests.get('https://cip.cc')
+        response = requests.get('https://api-ipv4.ip.sb/ip')
         if response.status_code == 200:
             return response.text.strip()
         else:
@@ -26,9 +26,9 @@ if __name__ == "__main__":
     # 先读取用户的输入
     user_name = input("请输入你的名字：")
     # 再拼接字符串
-    result_str = f"""你好，{user_name}！以下是你的电脑信息：\n
-    MAC地址: {get_mac_address()}\n
-    内网IP地址: {get_local_ip_address()}\n
-    公网IP地址: {get_public_ip_address()}"""
+    result_str = f"""我是{user_name}！以下是我的电脑信息：\n
+- MAC地址: {get_mac_address()}
+- 内网IP地址: {get_local_ip_address()}
+- 公网IP地址: {get_public_ip_address()}"""
     print(result_str)
     
